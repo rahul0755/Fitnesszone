@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://code.jquery.com/jquery-latest.min.js"
+	type="text/javascript"></script>
+<script src="membershipupdate.js"></script>
+<link rel="stylesheet" href="membership.css">
+<link rel="stylesheet" href="Equipment.css">
+</head>
+<body>
+	<div class="Main">
+		<div class="navbar">
+			<a href="Home.html">HOME</a>
+			<div class="subnav">
+				<button class="subnavbtn">
+					CLASSES <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="subnav-content">
+					<a href="batches.html">Batches</a> <a href="Yoga.html">Yoga</a>
+				</div>
+			</div>
+			<a href="Membership.html">MEMBERSHIP</a>
+			<div class="subnav">
+				<button class="subnavbtn">
+					ABOUT US<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="subnav-content">
+					<a href="Tranires.html">Trainers</a> <a href="Aboutus.html">Gym</a>
+					<a href="Changing.html">Changing Room</a> <a href="Equipment.html">Equipment</a>
+					<a href="rule.html">Club Rule</a> <a href="drink.html"> Drink
+						inc.-Health Bar</a> <a href="design.html">The Design</a>
+				</div>
+			</div>
+			<a href="timetable.html">OPENING TIMES</a> <a href="Contact.html">CONTACT</a>
+			<a href="Login.html" style="margin-left: 13.1in;">LOG IN</a>
+		</div>
+	</div>
+	<div class="submain"
+		style="background-image: url('https://static-news.moneycontrol.com/static-mcnews/2017/03/GYM_talwalkar-770x433.jpg');">
+		<form  action="Membershipupdateservlet"
+			method="post" onsubmit="return  validation() ">
+			<div class="container">
+			<label for="fname" style="color:blue;font-size:20px"><b>User Name</b></label> <input type="text"
+					name="fname" placeholder="Enter User first name" id="fname" required>
+				<span id="fnamespan" style="color: red"></span><br> 
+				
+				<label for="email" style="color:blue;font-size:20px"><b>Email id</b></label> <input type="text"
+					name="email" placeholder="Enter New Email Id" id="emailid" required>
+				<span id="emailspan" style="color: red"></span><br> 
+				
+				<label
+					for="contact" style="color:blue;font-size:20px"><b>Mobile number</b></label> <input type="text"
+					name="psw" placeholder="Enter New Contact number" id="contact"
+					required> <span id="contactspan" style="color: red"></span>
+
+					  <button type="submit" style="font-size:20px;background-color: green;color:black">Submit</button>
+			</div>
+		</form>
+		</div>
+		<br>
+		<br>
+		<div class="page-keep-up">
+			<div class="contanire1">
+				<h1>YOUR FEEDBACK IS IMPORTANT TO US</h1>
+				<div class="page-keep-up-content">
+					<p>Should you wish to leave Zone Fitness any comments or ideas,
+						then please click below</p>
+					<p>
+						<a class="btn" href="feedback.html">GIVE US YOUR FEEDBACK</a>
+					</p>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

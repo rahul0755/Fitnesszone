@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home of a Gym</title>
+<link rel="stylesheet" href="membership.css">
+<script src="feedback.js"></script>
+</head>
+<body>
+	<div class="Main" style="background-color: black">
+		<div class="navbar">
+			<a href="Home.html">HOME</a>
+			<div class="subnav">
+				<button class="subnavbtn">
+					CLASSES <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="subnav-content">
+					<a href="batches.html">Batches</a> <a href="Yoga.html">Yoga</a>
+				</div>
+			</div>
+			<a href="Membership.html">MEMBERSHIP</a>
+			<div class="subnav">
+				<button class="subnavbtn">
+					ABOUT US <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="subnav-content">
+					<a href="Tranires.html">Trainers</a> <a href="Aboutus.html">Gym</a>
+					<a href="Changing.html">Changing Room</a> <a href="Equipment.html">Equipment</a>
+					<a href="rule.html">Club Rule</a> <a href="drink.html"> Drink
+						inc.-Health Bar</a> <a href="design.html">The Design</a>
+				</div>
+			</div>
+			<a href="timetable.html">OPENING TIMES</a> <a href="Contact.html">CONTACT</a>
+			<a href="Login.html" style="margin-left: 13.1in;">LOG IN</a>
+		</div>
+	</div>
+
+	<p style="background-color: floralgray">
+	<div class="page-content">
+		<div class="container" style="background-color: #E6E6FA">
+			<h1
+				style="text-align: center; background-color: #8f8f8f; font-size: 60px;">
+				We'd love to hear your feedback on us.</h1>
+
+			<h3 style="text-align: center">Thank you for taking the time to
+				let us know what you think of the services we provide. Please fill
+				in the questions below with as much information as possible as this
+				will help us continue to improve the service we provide.</h3>
+			<h2>
+				<span id="type1_question"> 1.Which part/s of your customer
+					experience are you commenting on? </span>
+			</h2>
+			<hr>
+			<form name="myfrom" action="Feedbackservlet" method="post"
+				onsubmit="return validation()">
+				<div class="row condensed">
+					<div id="type1_left" class="col-xs-10 col-sm-4">
+						<div class="checkbox">
+							<label><input name="checkbox1" value="Customer Service"
+								type="checkbox" class="ace" />Customer Service</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Cleanliness"
+								type="checkbox" class="ace" /> Cleanliness</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Programming"
+								type="checkbox" class="ace" /> Programming</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Memberships"
+								type="checkbox" class="ace" /> Memberships</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Pricing"
+								type="checkbox" class="ace" /> Pricing</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Maintenance"
+								type="checkbox" class="ace" /> Maintenance</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Classes"
+								type="checkbox" class="ace" /> Classes</label>
+						</div>
+						<div class="checkbox">
+							<label><input name="checkbox1" value=" Other"
+								type="checkbox" class="ace" /> Other</label>
+						</div>
+
+						<span id="spanquestion1" style="color: red; font-size: 25px"></span>
+					</div>
+				</div>
+				<hr />
+				<h2>
+					<span id="type2_question">2.Which activity area are you
+						commenting on?</span>
+				</h2>
+				<div class="row condensed">
+					<div id="type2_left" class="col-xs-10 col-sm-4">
+						<div class="radio">
+							<label><input name="radio1"
+								value="Reception/Customer Service" type="radio" />
+								Reception/Customer Service</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio1" value=" Fitness" type="radio" />
+								Fitness</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio1" value=" Management"
+								type="radio" /> Management</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio1" value=" Other" type="radio" />
+								Other</label>
+						</div>
+
+						<span id="question2" style="color: red; font-size: 25px"></span>
+					</div>
+					<hr />
+				</div>
+
+				<h2>
+					3. <span id="type3_question">Would you say that you were
+						making a...</span>
+				</h2>
+				<div class="row condensed">
+					<div id="type3_left" class="col-xs-10 col-sm-4">
+						<div class="radio">
+							<label><input name="radio3" value="Complaint"
+								type="radio" /> Complaint</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio3" value="Compliment"
+								type="radio" /> Compliment</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio3" value="Comment/Suggestion"
+								type="radio" /> Comment/Suggestion</label>
+						</div>
+					</div>
+
+					<span id="question3" style="color: red; font-size: 25px"> </span>
+				</div>
+				<hr />
+				<h2>
+					4. <span id="type4_question">What would you like to tell us?</span>
+				</h2>
+				<div class="form-group">
+					<textarea name="question4" rows="5" class="form-control limited"
+						style="width: 1150px" id="textarea4"></textarea>
+					<br> <span id="spanquestion4"
+						style="color: red; font-size: 25px"></span>
+				</div>
+				<hr />
+				<h2>
+					5. <span id="type4_question282"> Visiting On</span>
+				</h2>
+				<div class="row condensed">
+					<div id="type282_left" class="col-xs-10 col-sm-4">
+						<div class="radio">
+							<label><input checked name="radio6" value="Not Known"
+								type="radio" class="ace" /> Not Known</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio6" value="Morning" type="radio"
+								class="ace" /> Morning</label>
+						</div>
+
+						<div class="radio">
+							<label><input name="radio6" value="Afternoon"
+								type="radio" class="ace" /> Afternoon</label>
+						</div>
+						<div class="radio">
+							<label><input name="radio6" value="Evening" type="radio"
+								class="ace" /> Evening</label>
+						</div>
+					</div>
+					<div class="radio">
+						<label><input name="radio6" value="N/A" type="radio"
+							class="ace" /> N/A</label>
+					</div>
+					<span id="question5" style="color: red; font-size: 25px"></span>
+					<hr />
+					<h2>
+						<span id="type4_question282">Contact Details</span>
+					</h2>
+					<h4>
+						<label>We would really like to respond to you about this
+							If you are happy for us to do so please give us your contact
+							details below.&nbsp;&nbsp;&nbsp;</label>
+					</h4>
+				</div>
+				<br> <label id="translate_ifyes"> how would you like to
+					be contacted?&nbsp;&nbsp;&nbsp;</label>
+				<p>
+				<div class="radio">
+					<input id="contact" name="contact" value="phone" type="radio"
+						class="ace" />Phone&nbsp;&nbsp;
+				</div>
+				<div class="radio">
+					<input id="contact" name="contact" value="email" type="radio"
+						class="ace" /> Email&nbsp;&nbsp;
+				</div>
+				<div class="radio">
+					<input id="contact" name="contact" value="letter" type="radio" />
+					Letter
+				</div>
+				<span id="spancontact" style="color: red; font-size: 25px"></span> <br>
+				<label id="translate_confirm">Please confirm your name and
+					the best telephone number or email address to contact you on.</label>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3" for="name" id="translate_name">
+							Name: </label>
+						<div class="col-sm-9">
+							<div class="clearfix">
+								<input id="name" type="text" name="name" placeholder="Name" />
+								<span id="spanname" style="color: red; font-size: 25px"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3" for="surname" id="translate_surname">
+						Surname: </label>
+					<div class="col-sm-9">
+						<div class="clearfix">
+							<input id="surname" type="text" name="surname"
+								placeholder="Surname" /><span id="spansurname"
+								style="color: red; font-size: 25px"></span>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3" for="phone" id="translate_phonenumber">
+						Telephone number:</label>
+					<div class="col-sm-9">
+						<div class="clearfix">
+							<input id="phone" type="text" name="phone"
+								placeholder="Telephone number" class="col-xs-12 col-sm-12" /><span
+								id="spanphone" style="color: red; font-size: 25px"></span>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3" for="email" id="translate_emailaddress">
+						Email Address:</label>
+					<div class="col-sm-9">
+						<div class="clearfix">
+							<input id="email" type="email" name="email"
+								placeholder="Email Address" class="col-xs-12 col-sm-12" /> <span
+								id="spanemail" style="color: red; font-size: 25px"></span>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3" for="member_id" id="translate_address">
+						Address:</label>
+					<div class="col-sm-9">
+						<div class="clearfix">
+							<textarea id="address" name="address" rows="" cols=""
+								placeholder="Address" class="col-xs-12 col-sm-12"
+								style="width: 1145px; height: 100px;"></textarea>
+							<span id="spanaddress" style="color: red; font-size: 25px"></span>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<div class="clearfix" id="translate_ps">* Please note your
+							contact details and any information you give us will only be used
+							for contacting you about your comment and will not be passed on
+							to any other third party.</div>
+					</div>
+				</div>
+				<br>
+
+				<button class="btn" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
