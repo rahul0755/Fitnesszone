@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Contact of a Gym</title>
+<link rel="stylesheet" href="membership.css">
+<link rel="stylesheet" href="Equipment.css">
+<script src="Contact.js"></script>
+<style>
+/* .page-top-overlay {
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 52;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    } */
+.centered {
+    color:aliceblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div class="Main" style="background-color:black">
+<div class="navbar">
+  <a href="Home.html">HOME</a>
+  <div class="subnav">
+    <button class="subnavbtn">CLASSES <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="batches.html">Batches</a>
+      <a href="Yoga.html">Yoga</a>
+    </div>
+  </div> 
+   <a href="Membership.html">MEMBERSHIP</a>
+  <div class="subnav">
+    <button class="subnavbtn">ABOUT US <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="Tranires.html">Trainers</a>
+      <a href="Aboutus.html">Gym</a>
+      <a href="Changing.html">Changing Room</a>
+      <a href="Equipment.html">Equipment</a>
+       <a href="rule.html">Club Rule</a>
+         <a href="drink.html"> Drink inc.-Health Bar</a>
+       <a href="design.html">The Design</a>
+    </div>
+  </div>
+  <a href="timetable.html">OPENING  TIMES</a>
+  <a href="Contact.html">CONTACT</a>
+  <a href="Login.html" style="margin-left: 13.1in;">LOG IN</a>
+  </div>
+</div>
+<div class="submain" style="background-image: url('https://dslv9ilpbe7p1.cloudfront.net/MHtcZEXBVhSI2N-W18MO9w_store_banner_image.jpeg');">
+<div class="centered" >
+<h1 style="color:cornsilk;font-size:50px">FEEL FREE TO CONTACT US!</h1>
+</div>
+	</div>
+		<br><br>
+		<div class="page-content">
+		<div class="container">
+		<h1 style="text-align:center">CONTACT  ZONE</h1>
+ 		<h3 style="color:floralgray">
+ 		<p>Can’t find the information you need?
+	<br>
+   Then please feel free to call us on 7558445666 or submit your message <br>
+     below and we’ll get back to you as soon as possible.</p></h3>
+	
+  	<form action="Contactservlet"  method="post" onsubmit="return validation()">
+    <label for="fname">Full Name</label>
+    <input type="text"  name="fname" placeholder="Full name"   id="fname" required>
+     <span id="fnamespan" style=color:red;></span><br>
+
+    <label for="Email">Email id</label>
+    <input type="text" name="email" placeholder="Email id"   id="emailid"  required>
+    <span id="emailspan" style=color:red;></span><br><br>
+    
+     <label for="phone">Phone </label>
+    <input type="text" name="phone" placeholder="phone number"  id="contact" required>
+    <span id="phonespan" style=color:red;></span><br><br>
+ 
+    <label for="subject" >Subject</label>
+    <textarea   name="subject" rows="5" placeholder="subject"   id="subject"  style="width:1150px" required ></textarea>
+     <br><span id="subjectspan" style=color:red;></span><br>
+
+	<button class="btn" type="submit">Submit</button>
+
+  </form>
+</div></div><br><br><br>
+<div class="page-keep-up">
+<div class="contanire1">
+<h1>YOUR FEEDBACK IS IMPORTANT TO US</h1>
+<div class="page-keep-up-content">
+<p>
+Should you wish to leave Zone Fitness any comments or ideas, then please click below 
+</p>
+<p>
+<a class="btn" href="feedback.html">GIVE US YOUR FEEDBACK </a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

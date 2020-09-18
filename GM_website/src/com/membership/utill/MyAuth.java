@@ -4,8 +4,8 @@ package com.membership.utill;
 
 public class MyAuth extends javax.mail.Authenticator {
 	
-	String username="rahulpawar0755@gmail.com";
-	String password="rahul@0755";
+	String username="";
+	String password="";
 
 	public MyAuth(String username,String password)
 	{

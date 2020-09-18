@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+	
+	<meta charset="utf-8" />
+	<title>ZONE FITNESS WEYMOUTH</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>E-focus</title>
+	<meta name="description" content="4Global">
+	<meta name="author" content="1190">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- basic styles -->
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/css/bootstrap-datetimepicker.min_.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../assets/css/select2.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
+<!--[if IE 7]>
+		  <link rel="stylesheet" href="../assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="../assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<!-- fonts -->
+		<link rel="stylesheet" href="../assets/css/ace-fonts.css" />
+		<!-- ace styles -->
+		<!--[if !IE]><!-->
+		<link rel="stylesheet" href="../assets/css/ace.min.css" />
+		<!--<![endif]-->
+		<link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-skins.min.css" />
+
+<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<!-- inline styles related to this page -->
+		<!-- ace settings handler -->
+		<script src="../assets/js/ace-extra.min.js"></script>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+		<script src="../assets/js/html5shiv.js"></script>
+		<script src="../assets/js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	.alert-color {
+		color: #FFF;
+		background-color: #8f8f8f;
+		border-color: #8f8f8f;
+		padding: 5px;
+	}
+
+	hr {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	h3 {
+		font-weight: bold;
+		color: #8f8f8f		!
+		important;
+	}
+	h4 {
+		font-weight: bold;
+		color: #8f8f8f		!
+		important;
+	}
+
+	h2 {
+		font-weight: bold;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.row .condensed {
+		margin-top: -20px;
+	}
+
+	.btn-warning,.btn-warning:focus {
+		border-color: #8f8f8f! important;
+		background-color: #8f8f8f!
+		important;
+	}
+
+	.btn-warning:hover { 		background-color: #7b7b7b!
+		important;
+	}
+	.modal_loading {
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255, 255, 255, .8) url('../assets/img/ajax-loader.gif') 50%
+		50% no-repeat;
+		opacity: 0.80;
+		-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		overflow: hidden;
+	}
+
+	.goog-logo-link {
+		display:none !important;
+	} 
+
+	.goog-te-gadget{
+		color: transparent !important;
+	}
+</style>
+</head>
+<body>
+	<div class="main-container" id="main-container">
+		<script type="text/javascript">
+			try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+		</script>
+		<div class="main-container-inner">
+			<div class="main-content" style="margin-left: 0px;">
+				<div class="page-content">
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- PAGE CONTENT BEGINS -->
+							<div class="row">
+								<div class="col-xs-12 col-sm-12">
+									<div class="col-md-offset-2 col-md-8 well">
+										<div style="margin-bottom: 50px;">
+											<h4><span id="translate_language">Choose Language </span></h4>
+											<select class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="slct_language" name="slct_language" style="display: none;">
+												<option  value='af'>Afrikaans</option><option  value='sq'>Albanian</option><option  value='ar'>Arabic</option><option  value='hy'>Armenian</option><option  value='az'>Azerbaijani</option><option  value='eu'>Basque</option><option  value='be'>Belarusian</option><option  value='bn'>Bengali</option><option  value='bs'>Bosnian</option><option  value='bg'>Bulgarian</option><option  value='ca'>Catalan</option><option  value='ceb'>Cebuano</option><option  value='ny'>Chichewa</option><option  value='zh-CN'>Chinese Simplified</option><option  value='zh-TW'>Chinese Traditional</option><option  value='hr'>Croatian</option><option  value='cs'>Czech</option><option  value='da'>Danish</option><option  value='nl'>Dutch</option><option selected value='en'>English</option><option  value='eo'>Esperanto</option><option  value='et'>Estonian</option><option  value='tl'>Filipino</option><option  value='fi'>Finnish</option><option  value='fr'>French</option><option  value='gl'>Galician</option><option  value='ka'>Georgian</option><option  value='de'>German</option><option  value='el'>Greek</option><option  value='gu'>Gujarati</option><option  value='ht'>Haitian Creole</option><option  value='ha'>Hausa</option><option  value='iw'>Hebrew</option><option  value='hi'>Hindi</option><option  value='hmn'>Hmong</option><option  value='hu'>Hungarian</option><option  value='is'>Icelandic</option><option  value='ig'>Igbo</option><option  value='id'>Indonesian</option><option  value='ga'>Irish</option><option  value='it'>Italian</option><option  value='ja'>Japanese</option><option  value='jw'>Javanese</option><option  value='kn'>Kannada</option><option  value='kk'>Kazakh</option><option  value='km'>Khmer</option><option  value='ko'>Korean</option><option  value='lo'>Lao</option><option  value='la'>Latin</option><option  value='lv'>Latvian</option><option  value='lt'>Lithuanian</option><option  value='mk'>Macedonian</option><option  value='mg'>Malagasy</option><option  value='ms'>Malay</option><option  value='ml'>Malayalam</option><option  value='mt'>Maltese</option><option  value='mi'>Maori</option><option  value='mr'>Marathi</option><option  value='mn'>Mongolian</option><option  value='my'>Myanmar (Burmese)</option><option  value='ne'>Nepali</option><option  value='no'>Norwegian</option><option  value='fa'>Persian</option><option  value='pl'>Polish</option><option  value='pt'>Portuguese</option><option  value='ma'>Punjabi</option><option  value='ro'>Romanian</option><option  value='ru'>Russian</option><option  value='sr'>Serbian</option><option  value='st'>Sesotho</option><option  value='si'>Sinhala</option><option  value='sk'>Slovak</option><option  value='sl'>Slovenian</option><option  value='so'>Somali</option><option  value='es'>Spanish</option><option  value='su'>Sudanese</option><option  value='sw'>Swahili</option><option  value='sv'>Swedish</option><option  value='tg'>Tajik</option><option  value='ta'>Tamil</option><option  value='te'>Telugu</option><option  value='th'>Thai</option><option  value='tr'>Turkish</option><option  value='uk'>Ukrainian</option><option  value='ur'>Urdu</option><option  value='uz'>Uzbek</option><option  value='vi'>Vietnamese</option><option  value='cy'>Welsh</option><option  value='yi'>Yiddish</option><option  value='yo'>Yoruba</option><option  value='zu'>Zulu</option>
+											</select>
+										</div>
+										<p style="text-align:right; vertical-align:middle;border-top: 0px;"><img src="../logos/623.png"></p>										<div class="alert alert-block alert-color">
+											<h2 id="top_message">We'd love to hear your feedback on us.</h2>
+										</div>
+
+										<form id="comment_card_form" method="post" action="comment_card_success.php?kiosk">
+											<p id="header_message">
+												<b>Thank you for taking the time to let us know what you think of the services we provide. Please fill in the questions below with as much information as possible as this will help us continue to improve the service we provide.</b>
+											</p>
+											<h3>1. <span id="type1_question">Which part/s of your customer experience are you commenting on?</span></h3><div class="row condensed"><div id="type1_left" class="col-xs-10 col-sm-4"><div class="checkbox"><label><input name="1[]" value="Customer Service" type="checkbox" class="ace"/><span class="lbl"> Customer Service</span></label></div><div class="checkbox"><label><input name="1[]" value=" Cleanliness" type="checkbox" class="ace"/><span class="lbl">  Cleanliness</span></label></div><div class="checkbox"><label><input name="1[]" value=" Programming" type="checkbox" class="ace"/><span class="lbl">  Programming</span></label></div><div class="checkbox"><label><input name="1[]" value=" Memberships" type="checkbox" class="ace"/><span class="lbl">  Memberships</span></label></div></div><div id="type1_right" class="col-xs-12 col-sm-4"><div class="checkbox"><label><input name="1[]" value=" Pricing" type="checkbox" class="ace"/><span class="lbl">  Pricing</span></label></div><div class="checkbox"><label><input name="1[]" value=" Maintenance" type="checkbox" class="ace"/><span class="lbl">  Maintenance</span></label></div><div class="checkbox"><label><input name="1[]" value=" Classes" type="checkbox" class="ace"/><span class="lbl">  Classes</span></label></div><div class="checkbox"><label><input name="1[]" value=" Other" type="checkbox" class="ace"/><span class="lbl">  Other</span></label></div></div></div><hr/><h3>2. <span id="type2_question">Which activity area are you commenting on?</span></h3><div class="row condensed"><div id="type2_left" class="col-xs-10 col-sm-4"><div class="radio"><label><input name="2" value="Reception/Customer Service" type="radio" class="ace"/><span class="lbl"> Reception/Customer Service</span></label></div><div class="radio"><label><input name="2" value=" Fitness" type="radio" class="ace"/><span class="lbl">  Fitness</span></label></div><div class="radio"><label><input name="2" value=" Management" type="radio" class="ace"/><span class="lbl">  Management</span></label></div><div class="radio"><label><input name="2" value=" Other" type="radio" class="ace"/><span class="lbl">  Other</span></label></div></div></div><hr/><h3>3. <span id="type3_question">Would you say that you were making a...</span></h3><div class="row condensed"><div id="type3_left" class="col-xs-10 col-sm-4"><div class="radio"><label><input name="3" value="Complaint" type="radio" class="ace"/><span class="lbl"> Complaint</span></label></div><div class="radio"><label><input name="3" value="Compliment" type="radio" class="ace"/><span class="lbl"> Compliment</span></label></div><div class="radio"><label><input name="3" value="Comment/Suggestion" type="radio" class="ace"/><span class="lbl"> Comment/Suggestion</span></label></div></div></div><hr/><h3>4. <span id="type4_question">What would you like to tell us?</span></h3><div class="form-group"><textarea name="4" rows="5" class="form-control limited" style="resize:none" maxlength="2500"></textarea></div><hr style="margin-top:20px;"/><h3>5. <span id="type4_question282">Date and Time of visit</span></h3><div class="row condensed"><div id="type282_left" class="col-xs-10 col-sm-4"><div class="radio"><label><input checked name="6" value="Not Known" type="radio" class="ace"/><span class="lbl"> Not Known</span></label></div><div class="radio"><label><input  name="6" value="Morning" type="radio" class="ace"/><span class="lbl"> Morning</span></label></div>							<div id="datetimepicker1" class="input-append radio">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="add-on"><i class="icon-calendar" style="cursor:pointer;"></i></span></span>
+									<input data-format="dd-MM-yyyy" name="start_date1" type="text" value="29-03-2020" class="col-xs-12 col-sm-12">
+								</div>
+							</div>
+							<div class="radio"><label><input  name="6" value="Afternoon" type="radio" class="ace"/><span class="lbl"> Afternoon</span></label></div>							<div id="datetimepicker2" class="input-append radio">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="add-on"><i class="icon-calendar" style="cursor:pointer;"></i></span></span>
+									<input data-format="dd-MM-yyyy" name="start_date2" type="text" value="29-03-2020" class="col-xs-12 col-sm-12">
+								</div>
+							</div>
+							<div class="radio"><label><input  name="6" value="Evening" type="radio" class="ace"/><span class="lbl"> Evening</span></label></div>							<div id="datetimepicker3" class="input-append radio">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="add-on"><i class="icon-calendar" style="cursor:pointer;"></i></span></span>
+									<input data-format="dd-MM-yyyy" name="start_date3" type="text" value="29-03-2020" class="col-xs-12 col-sm-12">
+								</div>
+							</div>
+							<div class="radio"><label><input  name="6" value="N/A" type="radio" class="ace"/><span class="lbl"> N/A</span></label></div></div></div><hr/>		
+											<div id="contactDetails">
+												<h3>Contact Details</h3>
+												<label>We would really like to respond to you about this comment. If you are happy for us to do so please give us your contact details below.&nbsp;&nbsp;&nbsp;</label>
+											</div>
+											<p>
+												<input id="respond_yes" name="respond" value="yes" type="radio" class="ace" /> <span class="lbl" id="translate_yes"> Yes&nbsp;&nbsp;</span> <input id="respond_no" name="respond" value="no" type="radio" class="ace" /> <span class="lbl" id="translate_no"> No</span>
+											</p>
+
+											<br> <label id="translate_ifyes">If 'Yes' how would you like to be contacted?&nbsp;&nbsp;&nbsp;</label>
+											<p>
+												<input id="contact_phone" name="contact" value="phone" type="radio" class="ace" disabled /> <span class="lbl" id="translate_phone"> Phone&nbsp;&nbsp;</span> 
+												<input id="contact_email" name="contact" value="email" type="radio" class="ace" disabled /> <span class="lbl" id="translate_email"> Email&nbsp;&nbsp;</span>
+																									<input id="contact_letter" name="contact" value="letter" type="radio" class="ace" disabled /> <span class="lbl" id="translate_letter"> Letter</span>
+																									</p>
+												<br> <label id="translate_confirm">Please confirm your name and the best telephone number or email address to contact you on.</label>
+												<div class="form-horizontal">
+													<div class="form-group">
+														<label class="col-sm-3" for="name" id="translate_name"> Name: </label>
+														<div class="col-sm-9">
+															<div class="clearfix">
+																<input id="name" type="text" name="name" placeholder="Name" class="col-xs-12 col-sm-12" disabled />
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3" for="surname" id="translate_surname"> Surname: </label>
+														<div class="col-sm-9">
+															<div class="clearfix">
+																<input id="surname" type="text" name="surname" placeholder="Surname" class="col-xs-12 col-sm-12" disabled />
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3" for="phone" id="translate_phonenumber"> Telephone number:</label>
+														<div class="col-sm-9">
+															<div class="clearfix">
+																<input id="phone" type="text" name="phone" placeholder="Telephone number" class="col-xs-12 col-sm-12" disabled />
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3" for="email" id="translate_emailaddress"> Email Address:</label>
+														<div class="col-sm-9">
+															<div class="clearfix">
+																<input id="email" type="text" name="email" placeholder="Email Address" class="col-xs-12 col-sm-12" disabled />
+															</div>
+														</div>
+													</div>
+
+																											<div class="form-group">
+															<label class="col-sm-3" for="member_id" id="translate_membershipnumber"> Membership number:</label>
+															<div class="col-sm-9">
+																<div class="clearfix">
+																	<input id="member_id" type="text" name="member_id" placeholder="This can be found on your membership card" class="col-xs-12 col-sm-12" disabled />
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-sm-3" for="member_id" id="translate_address"> Address:</label>
+															<div class="col-sm-9">
+																<div class="clearfix">
+																	<textarea id="address" name="address" rows="" cols="" placeholder="Address" class="col-xs-12 col-sm-12" style="width: 100%; height: 100%;" disabled></textarea>
+																</div>
+															</div>
+														</div>
+																											<hr>
+													<div class="form-group">
+														<div class="col-sm-12">
+															<div class="clearfix" id="translate_ps">* Please note your contact details and any information you give us will only be used for contacting you about your comment and will not be passed on to any other third party.</div>
+														</div>
+													</div>
+													<input id="geo_details" type="text" name="geo_details" hidden="hidden" />
+													<button id="bootbox_confirm" class="btn btn-block btn-warning btn-lg">
+														<i class="icon-save bigger-125"></i> <span id="translate_submit">Submit</span>
+													</button>
+																									</div>
+											</form>
+										</div>
+									</div>
+
+								</div>
+								<!-- PAGE CONTENT ENDS -->
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.page-content -->
+				</div>
+				<!-- /.main-content -->
+			</div>
+			<!-- /.main-container-inner -->
+			<!--[if !IE]><!-->
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"> <i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+			<div class="modal_loading"></div>
+			<!--<![endif]-->
+		</div>
+		<!-- /.main-container -->
+		<!-- basic scripts -->
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+	<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='../assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+	if("ontouchend" in document) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- page specific plugin scripts -->
+	<!--[if lte IE 8]>
+		  <script src="../assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="../assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="../assets/js/bootbox.min.js"></script>
+		<!-- ace scripts -->
+		<script src="../assets/js/ace-elements.min.js"></script>
+		<script src="../assets/js/ace.min.js"></script>
+
+		<script src="../assets/js/bootstrap-datetimepicker.min_.js"></script>
+		<script src="../assets/js/select2.min.js" type="text/javascript"></script>
+		<script>
+			function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({
+				    // here is where you change the language
+				    pageLanguage: 'en'
+				  }, 'translate_language');
+				}
+		</script>
+		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+
+
+			function httpGet(theUrl, divName)
+			{	
+				var xmlHttp = new XMLHttpRequest();
+				    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+				    xmlHttp.send( null );
+				    var responseDecoded = JSON.parse(xmlHttp.responseText);
+				    document.getElementById(divName).innerHTML = responseDecoded['data']['translations'][0]['translatedText'];
+				    // $('.modal_loading').hide();
+				    // return xmlHttp.responseText;
+				}
+
+				
+
+
+				$('#slct_language').select2().on("change", function(e) {
+
+
+
+
+
+					if ($('#translate_language').length > 0) {
+
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_language").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_language');
+					}
+					if ($('#top_message').length > 0) {
+						//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("top_message").innerHTML+'&target='+e.val;
+						httpGet(url, 'top_message');
+					}
+					if ($('#header_message').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("header_message").innerHTML+'&target='+e.val;
+						httpGet(url, 'header_message');
+					}
+					if ($('#type1_left').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type1_left").innerHTML+'&target='+e.val;
+						httpGet(url, 'type1_left');
+					}
+					if ($('#type1_right').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type1_right").innerHTML+'&target='+e.val;
+						httpGet(url, 'type1_right');
+					}	
+					if ($('#type1_question').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type1_question").innerHTML+'&target='+e.val;
+						httpGet(url, 'type1_question');
+					}	
+					if ($('#type2_question').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type2_question").innerHTML+'&target='+e.val;
+						httpGet(url, 'type2_question');
+					}
+					if ($('#type2_left').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type2_left").innerHTML+'&target='+e.val;
+						httpGet(url, 'type2_left');
+					}
+					if ($('#type2_right').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type2_right").innerHTML+'&target='+e.val;
+						httpGet(url, 'type2_right');
+					}
+					if ($('#type3_left').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type3_left").innerHTML+'&target='+e.val;
+						httpGet(url, 'type3_left');
+					}
+					if ($('#type3_right').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type3_right").innerHTML+'&target='+e.val;
+						httpGet(url, 'type3_right');					
+					}
+					if ($('#type3_question').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type3_question").innerHTML+'&target='+e.val;
+						httpGet(url, 'type3_question');
+					}
+
+					if ($('#type4_question').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type4_question").innerHTML+'&target='+e.val;
+						httpGet(url, 'type4_question');
+					}
+					if ($('#type4_question282').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type4_question282").innerHTML+'&target='+e.val;
+						httpGet(url, 'type4_question282');
+					}
+
+					if ($('#type282_left').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type282_left").innerHTML+'&target='+e.val;
+						httpGet(url, 'type282_left');
+					}
+					if ($('#type282_right').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type282_right").innerHTML+'&target='+e.val;
+						httpGet(url, 'type282_right');
+					}
+					if ($('#type5_question').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type5_question").innerHTML+'&target='+e.val;
+						httpGet(url, 'type5_question');
+					}
+
+					if ($('#type1star_left').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type1star_left").innerHTML+'&target='+e.val;
+						httpGet(url, 'type1star_left');
+					}
+					if ($('#type1star_right').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type1star_right").innerHTML+'&target='+e.val;
+						httpGet(url, 'type1star_right');
+					}
+
+					if ($('#type2star_left').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type2star_left").innerHTML+'&target='+e.val;
+						httpGet(url, 'type2star_left');
+					}
+					if ($('#type2star_right').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("type2star_right").innerHTML+'&target='+e.val;
+						httpGet(url, 'type2star_right');
+					}
+					if ($('#contactDetails').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("contactDetails").innerHTML+'&target='+e.val;
+						httpGet(url, 'contactDetails');
+					}
+					if ($('#translate_yes').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_yes").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_yes');
+					}
+					if ($('#translate_no').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_no").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_no');
+					}
+					if ($('#translate_ifyes').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_ifyes").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_ifyes');
+					}
+					if ($('#translate_phone').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_phone").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_phone');
+					}
+					if ($('#translate_email').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_email").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_email');
+					}
+					if ($('#translate_letter').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_letter").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_letter');
+					}
+					if ($('#translate_confirm').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_confirm").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_confirm');
+					}
+
+					if ($('#translate_name').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_name").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_name');
+					}
+
+					if ($('#translate_surname').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_surname").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_surname');
+					}
+					if ($('#translate_phonenumber').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_phonenumber").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_phonenumber');
+					}
+					if ($('#translate_emailaddress').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_emailaddress").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_emailaddress');
+					}
+					if ($('#translate_membershipnumber').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_membershipnumber").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_membershipnumber');
+					}
+					if ($('#translate_address').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_address").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_address');
+					}
+					if ($('#translate_ps').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_ps").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_ps');
+					}
+					if ($('#translate_submit').length > 0) {
+						var url = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBQkz6kq1tZjgK2AuEyPB6tEE3G6Qv1gJk&q='+document.getElementById("translate_submit").innerHTML+'&target='+e.val;
+						httpGet(url, 'translate_submit');
+					}					
+					
+						// $('.modal_loading').hide();
+
+					});
+
+				</script>
+				<script type="text/javascript">
+
+					var idleTime = 0;
+					var isKiosk = 'n/a';
+					$(document).ready(function () {
+
+						var idleInterval = setInterval(timerIncrement, 60000);
+
+						$(this).mousemove(function (e) {
+							idleTime = 0;
+						});
+						$(this).keypress(function (e) {
+							idleTime = 0;
+						});
+
+					});
+
+					function timerIncrement() {
+						idleTime = idleTime + 1;
+						if (idleTime > 4) {
+							window.scrollTo(0,0);
+							window.location.reload();
+						}
+					}
+
+					var currentUrl = document.referrer;
+
+					$.ajax({ 
+						type: 'POST',
+						url: 'func_comment_card.php',
+						data : 
+						{
+							'url'						: currentUrl,
+							'ajax_action'				: 'ifkiosk'
+						},
+						success: function(msg)
+						{
+							isKiosk = msg;
+						}
+					});
+
+					$("#datetimepicker1").datetimepicker({
+						pickTime: false
+					});
+
+					$("#datetimepicker2").datetimepicker({
+						pickTime: false
+					});
+
+					$("#datetimepicker3").datetimepicker({
+						pickTime: false
+					});
+
+
+
+					$("#datetimepicker1").hide();
+					$("#datetimepicker2").hide();
+					$("#datetimepicker3").hide();
+
+					$('input[type=radio][name=6]').change(function() {
+						if (this.value == 'Morning') 
+						{
+							$("#datetimepicker1").show('fast');
+							$("#datetimepicker2").hide('fast');
+							$("#datetimepicker3").hide('fast');	
+						}
+						else if (this.value == 'Afternoon') {
+							$("#datetimepicker1").hide('fast');
+							$("#datetimepicker2").show('fast');
+							$("#datetimepicker3").hide('fast');
+						}
+						else if (this.value == 'Evening') {
+							$("#datetimepicker1").hide('fast');
+							$("#datetimepicker2").hide('fast');
+							$("#datetimepicker3").show('fast');
+						}
+						else
+						{
+							$("#datetimepicker1").hide('fast');
+							$("#datetimepicker2").hide('fast');
+							$("#datetimepicker3").hide('fast');
+						}
+					});
+
+			//function
+			var audioElement = document.createElement('audio');
+			audioElement.setAttribute('src', '../assets/media/get_lucky.mp3');
+        	//audioElement.setAttribute('autoplay', 'autoplay');
+        	//$.get();
+        	var text = '';
+        	$(document).keypress(function(e)
+        	{
+        		var s = String.fromCharCode(e.which);
+        		text = text + s;
+        		if(text == '1190')
+        		{
+        			audioElement.play();
+        			text = '';
+        		}
+        		if(text == 'end')
+        		{
+        			audioElement.pause();
+        			text = '';
+        		}
+        	});		
+        	function IsEmail(email) 
+        	{
+        		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        		return regex.test(email);
+        	}
+        	jQuery(function($) {
+        		$('#respond_yes').click(function() 
+        		{
+        			if($('#respond_yes').is(':checked')) 
+        			{ 
+        				$("#contact_phone").prop("disabled", false);
+        				$("#contact_email").prop("disabled", false);
+        				$("#contact_letter").prop("disabled", false);
+        			}
+        		});
+
+        		$('#respond_no').click(function() 
+        		{
+        			if($('#respond_no').is(':checked')) 
+        			{ 
+        				$("#contact_phone").prop("disabled", true); 
+        				$("#contact_email").prop("disabled", true);
+        				$("#contact_letter").prop("disabled", true);
+        				$("#name").prop("disabled", true); 
+        				$("#surname").prop("disabled", true);
+        				$("#phone").prop("disabled", true);
+        				$("#email").prop("disabled", true);
+        				$("#member_id").prop("disabled", true);
+        				$("#address").prop("disabled", true);
+
+        				$("#contact_phone").prop('checked', false); 
+        				$("#contact_email").prop('checked', false);
+        				$("#contact_letter").prop("checked", false);
+        				$("#name").val(''); 
+        				$("#surname").val('');
+        				$("#phone").val('');
+        				$("#email").val('');
+        				$("#member_id").val('');
+        				$("#address").val('');
+        			}
+        		});
+
+        		$('#contact_phone').click(function() 
+        		{
+        			if($('#contact_phone').is(':checked')) 
+        			{ 
+        				$("#name").prop("disabled", false); 
+        				$("#surname").prop("disabled", false);
+        				$("#phone").prop("disabled", false);
+        				$("#email").prop("disabled", false);
+        				$("#member_id").prop("disabled", false);
+        				$("#address").prop("disabled", false);
+        			}
+        		});
+
+        		$('#contact_email').click(function() 
+        		{
+        			if($('#contact_email').is(':checked')) 
+        			{ 
+        				$("#name").prop("disabled", false); 
+        				$("#surname").prop("disabled", false);
+        				$("#phone").prop("disabled", false);
+        				$("#email").prop("disabled", false);
+        				$("#member_id").prop("disabled", false);
+        				$("#address").prop("disabled", false);
+        			}
+        		});
+
+        		$('#contact_letter').click(function() 
+        		{
+        			if($('#contact_letter').is(':checked')) 
+        			{ 
+        				$("#name").prop("disabled", false); 
+        				$("#surname").prop("disabled", false);
+        				$("#phone").prop("disabled", false);
+        				$("#email").prop("disabled", false);
+        				$("#member_id").prop("disabled", false);
+        				$("#address").prop("disabled", false);
+        			}
+        		});
+
+        		$('textarea.limited').inputlimiter({
+        			remText: '%n character%s remaining...',
+        			limitText: 'max allowed : %n.'
+        		});
+
+        		$("#bootbox_confirm").on(ace.click_event, function(e) 
+        		{
+        			// return;
+					//SURVEY
+					 
+								if($('input[name="1[]"]:checked').serialize()=='')
+								{
+									bootbox.alert("You have to fill question number 1.");
+									return false;
+								}
+								 
+								if($('input[name="2"]:checked').serialize()=='')
+								{
+																		bootbox.alert("You have to fill question number 2.");
+									return false;
+								}
+								 
+								if($('input[name="3"]:checked').serialize()=='')
+								{
+																		bootbox.alert("You have to fill question number 3.");
+									return false;
+								}
+								 
+								if($('textarea[name="4"]').val()=='')
+								{
+									bootbox.alert("You have to fill question number 4.");
+									return false;
+								}
+								
+					//CONTACT DETAILS
+					if($('input[name="respond"]:checked').serialize()=='')
+					{
+						bootbox.alert("Please tell us if you want to be contacted for your comment.");
+						return false;
+					}
+					else if($('input[name="respond"]:checked').serialize().toString()=='respond=yes')
+					{
+						if($('input[name="contact"]:checked').serialize()=='')
+						{
+							bootbox.alert("Please tell us how you want to be contacted for your comment.");
+							return false;
+						}
+					}
+					
+					if($('input[name="contact"]:checked').serialize().toString()=='contact=phone')
+					{
+													if($('#phone').val()=='')
+							{
+								bootbox.alert("Please enter your phone number.");
+								return false;
+							}
+												}
+					
+					if($('input[name="contact"]:checked').serialize().toString()=='contact=email')
+					{
+						if($('#email').val()=='')
+						{
+							bootbox.alert("Please enter your email address.");
+							return false;
+						}
+						if(!IsEmail($('#email').val()))
+						{
+							bootbox.alert("Please enter a valid email address.");
+							return false;
+						}
+					}
+
+					if($('input[name="contact"]:checked').serialize().toString()=='contact=letter')
+					{
+						if($('#address').val()=='')
+						{
+							bootbox.alert("Please enter your address.");
+							return false;
+						}
+					}
+					
+					/*if($('input[name="contact"]:checked').serialize().toString()=='contact=member_id')
+					{
+						if($('#member_id').val()=='')
+						{
+							bootbox.alert("Please enter your member id address.");
+							return false;
+						}
+					}*/
+
+					e.preventDefault();
+					bootbox.dialog({
+						message: "<span class='bigger-110'>Do you want to submit your response?</span>",
+						buttons: 			
+						{
+							"danger" :
+							{
+								"label" : "<i class='icon-remove'></i> No",
+								"className" : "btn-sm btn-danger",
+								"callback": function() 
+								{
+									//Example.show("none");
+								}
+							},
+							"success" :
+							{
+								"label" : "<i class='icon-ok'></i> Yes",
+								"className" : "btn-sm btn-success",
+								"callback": function() 
+								{
+									
+									$('#comment_card_form').submit();
+								}
+							}
+						}
+					});
+				});
+
+        	});
+        </script>
+    </body>
+    </html>
